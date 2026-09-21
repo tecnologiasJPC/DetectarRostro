@@ -118,11 +118,11 @@ if __name__ == "__main__":
 
     # Sustituye con la ruta de tu carpeta
     ruta = "C:\\Users\\john_\\Downloads"
-    # recortar_rostro(Path(ruta) /"16454700_008_e643.jpg", Path(ruta) /"rostro_recortado.jpg") 
+    resultado = obtener_imagen_mas_reciente(ruta)
+    # recortar_rostro(Path(ruta) /resultado, Path(ruta) /"rostro_recortado.jpg") 
     # sys.exit()
     
-    try:
-        resultado = obtener_imagen_mas_reciente(ruta)
+    try: # to cut a portion of the image from the edges and save it in the same location
         if resultado:
             print(f"La imagen más reciente es: {resultado}")
             recortar_y_guardar_en_mismo_lugar(Path(ruta) / resultado)
